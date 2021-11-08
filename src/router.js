@@ -1,9 +1,12 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Layout from "./components/Layout";
+import RouletteScreen from "./screens/roulette";
 
 export default function Router() {
   return (
-    <div className="App">
-      <Layout>layout</Layout>
-    </div>
+    <Layout>
+      <RouletteScreen />
+    </Layout>
   );
 }
