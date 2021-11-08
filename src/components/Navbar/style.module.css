@@ -1,16 +1,18 @@
 .navbar {
-  position: fixed;
+  position: sticky;
   display: flex;
   align-items: center;
   background: linear-gradient(to right, rgb(56, 60, 68), rgb(71, 75, 83));
+  padding: 10px 0 10px 0;
   top: 0;
   width: 100%;
   z-index: 1030;
   border-bottom-right-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .navbar > * {
-  padding: 10px;
+  margin-left: 14px;
 }
 
 .navbar_title {
