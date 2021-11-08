@@ -1,0 +1,7 @@
+.connected_users {
+  color: rgb(14, 224, 123);
+}
+
+.connected_users > * {
+  margin-right: 5px;
+}

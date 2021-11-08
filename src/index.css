@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "RapierZero";
+  src: url("assets/fonts/RapierZero.otf");
+}
+
+body {
+  margin: 0;
+  font-family: RapierZero;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(35, 44, 49);
+  color: whitesmoke;
+}
