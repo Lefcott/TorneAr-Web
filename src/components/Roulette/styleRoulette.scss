@@ -41,14 +41,13 @@
     left: 120%;
 }
 .buttons{
-    font-size: 1.5vw;
     position:relative;
-    min-height: 71px;
-    width: 55%;
-    margin-top: 12%;
-    margin-left: 25%;
-    margin-right: 23%;
-    transform:translate(0,-62%);
+        min-height: 71px;
+        width: 55%;
+        margin-top: 12%;
+        margin-left: 25%;
+        margin-right: 23%;
+        transform:translate(0,-62%);
     .buttonRed{
         position:relative;
         margin-left: 0.5%;
@@ -64,7 +63,7 @@
         border-style: inherit;
         transform:translate(0,-62%);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
     .buttonBlack{
         position:static;
@@ -81,7 +80,7 @@
         border-style: inherit;
         transform:translate(0,-62%);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
     .buttonZero{
         position:absolute;
@@ -92,216 +91,12 @@
         width:9vh;
         height:28vh;
         border-radius: 15%;
-        background-color:#1dbe45;
+        background-color:#4dff79;
         color:white;
         border-width: 0px;
         border-style: inherit;
         transform:translate(0,-62%);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button1To12{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -99.5%;
-        margin-top: 9%;
-        text-align: center;
-        width:37.6vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color: #474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button13To24{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -66%;
-        margin-top: 9%;
-        text-align: center;
-        width:37.6vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button25To36{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -32.7%;
-        margin-top: 9%;
-        text-align: center;
-        width:37.6vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button2_1{
-        position:absolute;
-        cursor: pointer;
-        margin-left: 0.6%;
-        margin-top: -16.22%;
-        text-align: center;
-        width:9vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button2_2{
-        position:absolute;
-        cursor: pointer;
-        margin-left: 0.6%;
-        margin-top: -7.8%;
-        text-align: center;
-        width:9vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button2_3{
-        position:absolute;
-        cursor: pointer;
-        margin-left: 0.6%;
-        margin-top: 0.54%;
-        text-align: center;
-        width:9vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button1To18{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -99.5%;
-        margin-top: 17.5%;
-        text-align: center;
-        width: 18.5vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .Even{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -82.8%;
-        margin-top: 17.5%;
-        text-align: center;
-        width: 18.5vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .RedButton{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -66%;
-        margin-top: 17.5%;
-        text-align: center;
-        width: 18.5vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#ff1a39;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .BlackButton{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -49.3%;
-        margin-top: 17.5%;
-        text-align: center;
-        width: 18.5vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .oddButton{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -32.7%;
-        margin-top: 17.5%;
-        text-align: center;
-        width: 18.5vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
-    }
-    .button19To36{
-        position:absolute;
-        cursor: pointer;
-        margin-left: -16%;
-        margin-top: 17.5%;
-        text-align: center;
-        width: 18.5vh;
-        height:9vh;
-        border-radius: 15%;
-        background-color:#474747;
-        color:white;
-        border-width: 0px;
-        border-style: inherit;
-        transform:translate(0,-62%);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
 }
