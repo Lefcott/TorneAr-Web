@@ -1,3 +1,6 @@
+import {createUser} from "../../queries/user";
 export default function Home() {
-  return <></>;
+  return <>
+  <form onSubmit={()=>createUser()}/>
+  </>;
 }
