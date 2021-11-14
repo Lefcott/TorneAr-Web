@@ -1,3 +1,4 @@
+import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
 const numRoulette=[5,10,23,8,30,11,36,13,27,6,34,17,25,2,21,4,19,15,32,0,26,3,35,12,28,7,29,18,22,9,31,14,20,1,33,16,24];   
@@ -95,7 +96,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -115,7 +115,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -132,7 +131,6 @@ class animations{
             let colors =[
                 "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -152,7 +150,6 @@ class animations{
             let colors =[
                 "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -169,7 +166,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -189,7 +185,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -206,7 +201,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -226,7 +220,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -243,7 +236,6 @@ class animations{
             let colors =[
                 "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -263,7 +255,6 @@ class animations{
             let colors =[
                 "#474747", "#ff1a39", "#474747",  "#474747", "#ff1a39", "#474747",  "#474747", "#ff1a39", "#474747",  "#474747", "#ff1a39", "#474747"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -280,7 +271,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -300,7 +290,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39",  "#474747", "#474747", "#ff1a39"
             ];
-            
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -309,7 +298,6 @@ class animations{
                 });
             }
         }
-        
         if(this.id === "button1To18"){
             let numbers =[
                 "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"
@@ -515,9 +503,6 @@ class animations{
                 });
             }
         }
-
-        
-
         gsap.to("#"+this.id,{
             duration:0.5,
             backgroundColor: this.color,
