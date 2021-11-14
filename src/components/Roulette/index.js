@@ -19,12 +19,12 @@ const Roulette = () => {
   useEffect(() => {
     let newNumWin = getRand(0, 37);
     let animationRoulette = new animations(newNumWin);
-    animationRoulette.animation();
+    animationRoulette.animation(newNumWin);
     setNumWin(newNumWin);
     setInterval(() => {
       let newNumWin = getRand(0, 37);
       let animationRoulette = new animations(newNumWin);
-      animationRoulette.animation();
+      animationRoulette.animation(newNumWin);
       setNumWin(newNumWin);
     }, 30000);
   }, []);

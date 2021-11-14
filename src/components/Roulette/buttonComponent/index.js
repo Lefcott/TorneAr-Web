@@ -61,7 +61,7 @@ const ButtonComponent = () => {
         <button onMouseLeave={App.parameters("#474747","button2_3Out")} onMouseEnter={App.parameters("#7a7a7a","button2_3")} id= "button2_3" className="button2_3" style={{ cursor: "pointer" }}>2:1</button>
         <button onMouseLeave={App.parameters("#474747","button1To18Out")} onMouseEnter={App.parameters("#7a7a7a","button1To18")} id= "button1To18" className="button1To18" style={{ cursor: "pointer" }}>1 to 18</button>
         <button onMouseLeave={App.parameters("#474747","EvenOut")} onMouseEnter={App.parameters("#7a7a7a","Even")} id= "Even" className="Even" style={{ cursor: "pointer" }}>Even</button>
-        <button onMouseLeave={App.parameters("#474747","RedButtonOut")} onMouseEnter={App.parameters("#7a7a7a","RedButton")} id= "RedButton" className="RedButton" style={{ cursor: "pointer" }} />
+        <button onMouseLeave={App.parameters("#ff1a39","RedButtonOut")} onMouseEnter={App.parameters("#ff5c71","RedButton")} id= "RedButton" className="RedButton" style={{ cursor: "pointer" }} />
         <button onMouseLeave={App.parameters("#474747","BlackButtonOut")} onMouseEnter={App.parameters("#7a7a7a","BlackButton")} id= "BlackButton" className="BlackButton" style={{ cursor: "pointer" }} />
         <button onMouseLeave={App.parameters("#474747","oddButtonOut")} onMouseEnter={App.parameters("#7a7a7a","oddButton")} id= "oddButton" className="oddButton" style={{ cursor: "pointer" }}>Odd</button>
         <button onMouseLeave={App.parameters("#474747","button19To36Out")} onMouseEnter={App.parameters("#7a7a7a","button19To36")} id= "button19To36" className="button19To36" style={{ cursor: "pointer" }}>19 to 36</button>
