@@ -13,7 +13,7 @@ function getRand(min, max) {
 
 const Roulette = () => {
   const [counter, setcounter] = useState(25);
-  const [numWin, setNumWin] = useState(25);
+  const [, setNumWin] = useState(25);
   const counterRef = useRef(counter);
 
   useEffect(() => {
