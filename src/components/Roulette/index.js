@@ -13,18 +13,18 @@ function getRand(min, max) {
 
 const Roulette = () => {
   const [counter, setcounter] = useState(25);
-  const [numWin, setNumWin] = useState(25);
+  const [, setNumWin] = useState(25);
   const counterRef = useRef(counter);
 
   useEffect(() => {
     let newNumWin = getRand(0, 37);
     let animationRoulette = new animations(newNumWin);
-    animationRoulette.animation();
+    animationRoulette.animation(newNumWin);
     setNumWin(newNumWin);
     setInterval(() => {
       let newNumWin = getRand(0, 37);
       let animationRoulette = new animations(newNumWin);
-      animationRoulette.animation();
+      animationRoulette.animation(newNumWin);
       setNumWin(newNumWin);
     }, 30000);
   }, []);

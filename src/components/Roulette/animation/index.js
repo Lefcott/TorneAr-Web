@@ -1,19 +1,15 @@
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 
-const numRoulette = [
-    5, 10, 23, 8, 30, 11, 36, 13, 27, 6, 34, 17, 25, 2, 21, 4, 19, 15, 32, 0, 26,
-    3, 35, 12, 28, 7, 29, 18, 22, 9, 31, 14, 20, 1, 33, 16, 24,
-  ];
-
+const numRoulette=[5,10,23,8,30,11,36,13,27,6,34,17,25,2,21,4,19,15,32,0,26,3,35,12,28,7,29,18,22,9,31,14,20,1,33,16,24];   
 class animations{
-    constructor(number=0,color="white",id="0"){
+    constructor(){
         this.number;
         this.color;
         this.id;
     }
 
-    animation = number =>{
+    animation(number){
         const random = (numRoulette.indexOf(number) * 360) / 37;
         let tl = gsap.timeline({
             repeat: 0,
@@ -100,7 +96,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -120,7 +115,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -137,7 +131,6 @@ class animations{
             let colors =[
                 "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -157,7 +150,6 @@ class animations{
             let colors =[
                 "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -174,7 +166,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -194,7 +185,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -211,7 +201,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -231,7 +220,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -248,7 +236,6 @@ class animations{
             let colors =[
                 "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -268,7 +255,6 @@ class animations{
             let colors =[
                 "#474747", "#ff1a39", "#474747",  "#474747", "#ff1a39", "#474747",  "#474747", "#ff1a39", "#474747",  "#474747", "#ff1a39", "#474747"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -285,7 +271,6 @@ class animations{
             let colors =[
                 "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -305,7 +290,6 @@ class animations{
             let colors =[
                 "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39",  "#ff1a39", "#474747", "#ff1a39",  "#474747", "#474747", "#ff1a39"
             ];
-            let change = [numbers,colors];
             for (let i = 0; i < 13; i++) {
                 gsap.to("#num"+numbers[i],{
                     duration:0.5,
@@ -314,8 +298,211 @@ class animations{
                 });
             }
         }
+        if(this.id === "button1To18"){
+            let numbers =[
+                "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"
+            ];
+            let colors =[
+                "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71"
+            ];
+            
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        } else if(this.id === "button1To18Out"){
+            gsap.to("#button1To18",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+            let numbers =[
+                "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18"
+            ];
+            let colors =[
+                "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39"
+            ];
+            
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        }
+
+        if(this.id === "Even"){
+            let numbers = new Array();
+            for(let i = 1; i< 37; i++){
+                if(i % 2 === 1){
+                    numbers = numbers.concat(i);
+                }
+            }
+            let colors =[
+                "#ff5c71", "#ff5c71", "#ff5c71", "#ff5c71", "#ff5c71", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#ff5c71", "#ff5c71", "#ff5c71", "#ff5c71", "#ff5c71", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#7a7a7a"
+            ];
+            
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        } else if(this.id === "EvenOut"){
+            gsap.to("#Even",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+            let numbers = new Array();
+            for(let i = 1; i< 37; i++){
+                if(i % 2 === 1){
+                    numbers = numbers.concat(i);
+                }
+            }
+            let colors =[
+                "#ff1a39", "#ff1a39", "#ff1a39", "#ff1a39", "#ff1a39", "#474747", "#474747", "#474747", "#474747", "#ff1a39", "#ff1a39", "#ff1a39", "#ff1a39", "#ff1a39", "#474747", "#474747", "#474747", "#474747"
+            ];
+            
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        }
         
-        
+        if(this.id === "RedButton"){
+            gsap.to(".buttonRed",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+        } else if(this.id === "RedButtonOut"){
+            gsap.to("#RedButton",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+            gsap.to(".buttonRed",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+        }
+
+        if(this.id === "BlackButton"){
+            gsap.to(".buttonBlack",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+        } else if(this.id === "BlackButtonOut"){
+            gsap.to("#BlackButton",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+            gsap.to(".buttonBlack",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+        }
+
+        if(this.id === "oddButton"){
+            let numbers = new Array();
+            for(let i = 1; i< 37; i++){
+                if(i % 2 === 0){
+                    numbers = numbers.concat(i);
+                }
+            }
+            console.log(numbers);
+            let colors =[
+                "#7a7a7a", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#ff5c71", "#ff5c71", "#ff5c71", "#ff5c71", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#7a7a7a", "#ff5c71", "#ff5c71", "#ff5c71", "#ff5c71"
+            ];
+            
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        } else if(this.id === "oddButtonOut"){
+            gsap.to("#oddButton",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+            let numbers = new Array();
+            for(let i = 1; i< 37; i++){
+                if(i % 2 === 0){
+                    numbers = numbers.concat(i);
+                }
+            }
+            let colors =[
+                "#474747", "#474747", "#474747", "#474747", "#474747", "#ff1a39", "#ff1a39", "#ff1a39", "#ff1a39", "#474747", "#474747", "#474747", "#474747", "#474747", "#ff1a39", "#ff1a39", "#ff1a39", "#ff1a39"
+            ];
+
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        }
+
+        if(this.id === "button19To36"){
+            let numbers = new Array();
+            for(let i = 1; i< 37; i++){
+                if(i >= 19){
+                    numbers = numbers.concat(i);
+                }
+            }
+            console.log(numbers);
+            let colors =[
+                "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71", "#7a7a7a", "#ff5c71"
+            ];
+            
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        } else if(this.id === "button19To36Out"){
+            gsap.to("#button19To36",{
+                duration:0.5,
+                backgroundColor: this.color,
+                ease: "Power4-easeOut",
+            });
+            let numbers = new Array();
+            for(let i = 1; i< 37; i++){
+                if(i >= 19){
+                    numbers = numbers.concat(i);
+                }
+            }
+            let colors =[
+                "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", "#474747", "#ff1a39", 
+            ];
+
+            for (let i = 0; i < numbers.length; i++) {
+                gsap.to("#num"+numbers[i],{
+                    duration:0.5,
+                    backgroundColor: colors[i],
+                    ease: "Power4-easeOut",
+                });
+            }
+        }
         gsap.to("#"+this.id,{
             duration:0.5,
             backgroundColor: this.color,
