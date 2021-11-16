@@ -1,0 +1,10 @@
+.connected_users {
+  color: rgb(14, 224, 123);
+  background-color: rgb(34, 44, 49);
+  border-radius: 10px;
+  padding: 7px 11px 7px 11px;
+}
+
+.connected_users > * {
+  margin-right: 5px;
+}
