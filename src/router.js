@@ -10,7 +10,7 @@ export default function Router() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="roulette" element={<RouletteScreen />} />
+          <Route path="ruleta" element={<RouletteScreen />} />
         </Routes>
       </BrowserRouter>
     </Layout>
