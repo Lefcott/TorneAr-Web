@@ -1,0 +1,32 @@
+.sidebar {
+  background: #0f212e;
+  box-sizing: border-box;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  padding-top: 63px;
+  top: 0;
+  width: 240px;
+  transition: 1s;
+}
+
+.closed_sidebar {
+  left: -100%;
+}
+
+.sidebar .sidebar_close {
+  color: whitesmoke;
+}
+
+.close_button_container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: right;
+  margin-bottom: 10px;
+}
+
+.close_button {
+  margin-right: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}

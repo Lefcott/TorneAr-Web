@@ -1,0 +1,25 @@
+.list_item {
+  background-color: inherit;
+  border-radius: 15px;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: whitesmoke;
+  display: block;
+  font-family: NotoSans, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 12px;
+  padding-left: 10px;
+  transition: all 0.2s;
+}
+
+.list_item:hover {
+  background-color: #0b1923;
+  color: white;
+  padding-left: 12px;
+}
+
+.list_item > .icon {
+  color: whitesmoke;
+  margin-right: 10px;
+}

@@ -3,6 +3,34 @@
   src: url("assets/fonts/RapierZero.otf");
 }
 
+@font-face {
+  font-family: "NotoSans";
+  src: url("assets/fonts/NotoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NotoSansBold";
+  src: url("assets/fonts/NotoSans-Bold.ttf");
+}
+
+@font-face {
+  font-family: "NotoSansItalic";
+  src: url("assets/fonts/NotoSans-Italic.ttf");
+}
+
+@font-face {
+  font-family: "NotoSansBoldItalic";
+  src: url("assets/fonts/NotoSans-BoldItalic.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   font-family: RapierZero;

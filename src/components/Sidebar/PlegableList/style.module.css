@@ -1,0 +1,45 @@
+.plegable_list {
+  box-sizing: border-box;
+  font-family: NotoSans, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0px 15px;
+  width: 100%;
+}
+
+.title {
+  display: inline-flex;
+  font-size: 0.9rem;
+}
+
+.plegable_list_head {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plegable_list_body {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 0px;
+  animation: appear 0.5s;
+  transition: 0.5s;
+}
+
+.list_body_closed {
+  transform: translate(-150%);
+}
+
+.toggle_button {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.toggle_button_closed {
+  transform: rotate(90deg);
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(-150%);
+  }
+}
