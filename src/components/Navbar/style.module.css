@@ -1,13 +1,15 @@
 .navbar {
   position: sticky;
-  display: flex;
   align-items: center;
-  background: linear-gradient(to right, rgb(56, 60, 68), rgb(71, 75, 83));
+  display: flex;
+  background-color: #1f2833;
+  box-shadow: -1px 4px 5px 0px rgba(9, 24, 35, 0.7);
+  -webkit-box-shadow: -1px 4px 5px 0px rgba(9, 24, 35, 0.7);
+  -moz-box-shadow: -1px 4px 5px 0px rgba(9, 24, 35, 0.7);
   padding: 10px 0 10px 0;
   top: 0;
   width: 100%;
   z-index: 1030;
-  border-bottom-right-radius: 20px;
   margin-bottom: 10px;
 }
 
@@ -16,6 +18,7 @@
 }
 
 .navbar_title {
+  font-family: RapierZero;
   font-size: 21px;
 }
 
@@ -25,8 +28,8 @@
 }
 
 .link {
-  display: flex;
   color: inherit;
+  display: flex;
   text-decoration: inherit;
 }
 

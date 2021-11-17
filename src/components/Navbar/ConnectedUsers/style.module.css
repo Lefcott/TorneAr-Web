@@ -1,7 +1,8 @@
 .connected_users {
-  color: rgb(14, 224, 123);
   background-color: rgb(34, 44, 49);
   border-radius: 10px;
+  color: rgb(14, 224, 123);
+  font-family: NotoSansBold;
   padding: 7px 11px 7px 11px;
 }
 

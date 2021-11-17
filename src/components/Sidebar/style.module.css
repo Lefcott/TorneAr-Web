@@ -1,13 +1,16 @@
 .sidebar {
-  background: #0f212e;
+  background-color: #0f212e;
   box-sizing: border-box;
+  box-shadow: 2px 1px 7px 0px rgba(9,24,35,0.69);
+  -webkit-box-shadow: 2px 1px 7px 0px rgba(9,24,35,0.69);
+  -moz-box-shadow: 2px 1px 7px 0px rgba(9,24,35,0.69);
   height: 100vh;
   left: 0;
   position: fixed;
   padding-top: 63px;
   top: 0;
   width: 240px;
-  transition: 1s;
+  transition: 1s;  
 }
 
 .closed_sidebar {
