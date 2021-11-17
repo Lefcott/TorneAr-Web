@@ -4,9 +4,9 @@ import React from "react";
 import Roulette from "../../components/Roulette";
 
 export default function RouletteScreen() {
-  return(
+  return (
     <div>
-      <Roulette/>
+      <Roulette />
     </div>
   );
-} 
+}
