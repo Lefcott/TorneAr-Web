@@ -15,5 +15,5 @@ export default function ListItem({ icon, text, link }) {
 ListItem.propTypes = {
   icon: PropTypes.any.isRequired,
   text: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
 };

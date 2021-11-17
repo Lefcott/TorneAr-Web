@@ -5,7 +5,6 @@ import "./styleRoulette.scss";
 import animations from "./animation/index";
 import ButtonComponent from "./buttonComponent";
 
-
 function getRand(min, max) {
   const result = Math.floor(Math.random() * (max - min) + min);
   return result;
@@ -33,9 +32,9 @@ const Roulette = () => {
     const startCounter = () => {
       let interval;
       setTimeout(() => {
-          let animation = new animations();
-          animation.animationCounter();
-          interval = setInterval(() => {
+        let animation = new animations();
+        animation.animationCounter();
+        interval = setInterval(() => {
           counterRef.current = counterRef.current - 1;
           setcounter(counterRef.current);
           if (counterRef.current === 0) {
@@ -43,7 +42,7 @@ const Roulette = () => {
             clearInterval(interval);
             setcounter(25);
             counterRef.current = 25;
-          } else if(counterRef.current > 9){
+          } else if (counterRef.current > 9) {
             animation.animationCounter();
           } else {
             animation.number = "red";
@@ -62,9 +61,9 @@ const Roulette = () => {
       <div className="roulette">
         <img className="rouletteImg" src={roulettesrc} />
         <img className="indicator" src={indicatorsrc} />
-        <h1 className ="counterStyle">{counter.toString()}</h1>
+        <h1 className="counterStyle">{counter.toString()}</h1>
       </div>
-      <ButtonComponent/>
+      <ButtonComponent />
     </div>
   );
 };

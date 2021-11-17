@@ -21,8 +21,8 @@
 .plegable_list_body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 0px;
-  animation: appear .5s;
-  transition: .5s;
+  animation: appear 0.5s;
+  transition: 0.5s;
 }
 
 .list_body_closed {

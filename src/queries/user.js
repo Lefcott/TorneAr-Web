@@ -1,1 +1,1 @@
-export const createUser=()=>3;
+export const createUser = () => 3;

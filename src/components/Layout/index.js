@@ -56,7 +56,7 @@ export default function Layout({ children }) {
   return (
     <div>
       <Navbar />
-      <Sidebar lists={lists}/>
+      <Sidebar lists={lists} />
       <div className="container">{children}</div>
     </div>
   );
