@@ -32,10 +32,10 @@
 }
 
 body {
-  margin: 0;
-  font-family: RapierZero;
+  background-color: #16212B;
+  color: whitesmoke;
+  font-family: NotoSans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(35, 44, 49);
-  color: whitesmoke;
+  margin: 0;
 }
