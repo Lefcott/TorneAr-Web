@@ -1,6 +1,9 @@
+import { Component } from "react";
+import { gsap } from "gsap";
+
 import style from "../style.module.scss";
 import animations from "../animation";
-import { Component } from "react";
+import { getGrayColor, getGreenColor, getRedColor } from "./utils";
 
 class App extends Component {
   static parameters(color, id) {
@@ -14,11 +17,32 @@ class App extends Component {
 }
 
 const ButtonComponent = () => {
+  const handleMouseEvent = (event, firstNumber, lastNumber) => {
+    const isHovered = event.type === "mouseenter";
+
+    for (let i = firstNumber; i <= lastNumber; i++) {
+      const color =
+        i === 0
+          ? getGreenColor(isHovered)
+          : i % 2 === 0
+          ? getGrayColor(isHovered)
+          : getRedColor(isHovered);
+
+      gsap.to(`#num${i}`, {
+        duration: 0.5,
+        backgroundColor: color,
+        ease: "Power4-easeOut",
+      });
+    }
+  };
+
   return (
     <div className={style.buttons}>
       <button
-        onMouseLeave={App.parameters("#1dbe45", "num0")}
-        onMouseEnter={App.parameters("#32ff65", "num0")}
+        // onMouseLeave={App.parameters("#1dbe45", "num0")}
+        // onMouseEnter={App.parameters("#32ff65", "num0")}
+        onMouseLeave={(event) => handleMouseEvent(event, 0, 0)}
+        onMouseEnter={(event) => handleMouseEvent(event, 0, 0)}
         id="num0"
         className={style.buttonZero}
         style={{ cursor: "pointer" }}
@@ -350,8 +374,10 @@ const ButtonComponent = () => {
         34
       </button>
       <button
-        onMouseLeave={App.parameters("#474747", "button1To12Out")}
-        onMouseEnter={App.parameters("#7a7a7a", "button1To12")}
+        // onMouseLeave={App.parameters("#474747", "button1To12Out")}
+        // onMouseEnter={App.parameters("#7a7a7a", "button1To12")}
+        onMouseLeave={(event) => handleMouseEvent(event, 1, 12)}
+        onMouseEnter={(event) => handleMouseEvent(event, 1, 12)}
         id="button1To12"
         className={style.button1To12}
         style={{ cursor: "pointer" }}

@@ -4,7 +4,7 @@ import indicatorsrc from "./images/indicator.png";
 import style from "./style.module.scss";
 import animations from "./animation";
 import ButtonComponent from "./buttonComponent";
-console.log("style", style);
+
 function getRand(min, max) {
   const result = Math.floor(Math.random() * (max - min) + min);
   return result;
