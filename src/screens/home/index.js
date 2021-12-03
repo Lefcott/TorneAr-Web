@@ -1,4 +1,5 @@
-import { createUser } from "../../queries/user";
+import { createUser } from "queries/user";
+
 export default function Home() {
   return (
     <>
