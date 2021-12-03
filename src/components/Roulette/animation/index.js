@@ -1,10 +1,11 @@
 import { gsap } from "gsap";
 import style from "../style.module.scss";
 
-const numRoulette = [
+const rouletteNumbers = [
   5, 10, 23, 8, 30, 11, 36, 13, 27, 6, 34, 17, 25, 2, 21, 4, 19, 15, 32, 0, 26,
   3, 35, 12, 28, 7, 29, 18, 22, 9, 31, 14, 20, 1, 33, 16, 24,
 ];
+
 class animations {
   constructor() {
     this.number;
@@ -13,7 +14,7 @@ class animations {
   }
 
   animation(number) {
-    const random = (numRoulette.indexOf(number) * 360) / 37;
+    const random = (rouletteNumbers.indexOf(number) * 360) / 37;
     let tl = gsap.timeline({
       repeat: 0,
       repeatRefresh: true,

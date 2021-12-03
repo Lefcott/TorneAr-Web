@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import roulettesrc from "./images/roulette.png";
 import indicatorsrc from "./images/indicator.png";
 import style from "./style.module.scss";
-import animations from "./animation/index";
+import animations from "./animation";
 import ButtonComponent from "./buttonComponent";
 console.log("style", style);
 function getRand(min, max) {

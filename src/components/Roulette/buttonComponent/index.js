@@ -1,5 +1,5 @@
 import style from "../style.module.scss";
-import animations from "../animation/index";
+import animations from "../animation";
 import { Component } from "react";
 
 class App extends Component {
