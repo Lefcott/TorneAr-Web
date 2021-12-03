@@ -34,6 +34,13 @@ const ButtonComponent = () => {
         ease: "Power4-easeOut",
       });
     }
+    if (event.target.id && !event.target.id.startsWith("num")) {
+      gsap.to(event.target, {
+        duration: 0.5,
+        backgroundColor: getGrayColor(isHovered),
+        ease: "Power4-easeOut",
+      });
+    }
   };
 
   return (
