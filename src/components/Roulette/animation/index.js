@@ -1,4 +1,5 @@
 import { gsap } from "gsap";
+import style from "../style.module.scss";
 
 const numRoulette = [
   5, 10, 23, 8, 30, 11, 36, 13, 27, 6, 34, 17, 25, 2, 21, 4, 19, 15, 32, 0, 26,
@@ -17,23 +18,23 @@ class animations {
       repeat: 0,
       repeatRefresh: true,
     });
-    tl.to(".rouletteImg", {
+    tl.to(`.${style.rouletteImg}`, {
       opacity: 1,
       duration: 2.5,
       rotation: 360 * 8,
       ease: "none",
     });
 
-    tl.to(".rouletteImg", {
+    tl.to(`.${style.rouletteImg}`, {
       duration: 2.5,
       rotation: 360 * 15 + random,
       ease: "slowly",
     });
-    tl.to(".rouletteImg", {
+    tl.to(`.${style.rouletteImg}`, {
       duration: 5,
       ease: "slowly",
     });
-    tl.to(".rouletteImg", {
+    tl.to(`.${style.rouletteImg}`, {
       duration: 20,
       opacity: 0.5,
       rotation: 0,
@@ -50,21 +51,21 @@ class animations {
       repeat: 0,
       repeatRefresh: true,
     });
-    blinkEffect.to(".counterStyle", {
+    blinkEffect.to(`.${style.counterStyle}`, {
       duration: 0.7,
       opacity: 1,
       ease: "Power4-easeOut",
     });
-    blinkEffect.to(".counterStyle", {
+    blinkEffect.to(`.${style.counterStyle}`, {
       duration: 0.3,
       opacity: 0,
       ease: "Power4-easeOut",
     });
-    bounceEffect.to(".counterStyle", {
+    bounceEffect.to(`.${style.counterStyle}`, {
       duration: 0.5,
       fontSize: "1000%",
     });
-    bounceEffect.to(".counterStyle", {
+    bounceEffect.to(`.${style.counterStyle}`, {
       duration: 0.5,
       fontSize: "500%",
     });
@@ -73,7 +74,7 @@ class animations {
         repeat: 0,
         repeatRefresh: true,
       });
-      red.to(".counterStyle", {
+      red.to(`.${style.counterStyle}`, {
         duration: 1,
         color: "red",
       });
@@ -82,7 +83,7 @@ class animations {
         repeat: 0,
         repeatRefresh: true,
       });
-      white.to(".counterStyle", {
+      white.to(`.${style.counterStyle}`, {
         duration: 0,
         color: "white",
       });
@@ -746,7 +747,7 @@ class animations {
     }
 
     if (this.id === "RedButton") {
-      gsap.to(".buttonRed", {
+      gsap.to(`.${style.buttonRed}`, {
         duration: 0.5,
         backgroundColor: this.color,
         ease: "Power4-easeOut",
@@ -757,7 +758,7 @@ class animations {
         backgroundColor: this.color,
         ease: "Power4-easeOut",
       });
-      gsap.to(".buttonRed", {
+      gsap.to(`.${style.buttonRed}`, {
         duration: 0.5,
         backgroundColor: this.color,
         ease: "Power4-easeOut",
@@ -765,7 +766,7 @@ class animations {
     }
 
     if (this.id === "BlackButton") {
-      gsap.to(".buttonBlack", {
+      gsap.to(`.${style.buttonBlack}`, {
         duration: 0.5,
         backgroundColor: this.color,
         ease: "Power4-easeOut",
@@ -776,7 +777,7 @@ class animations {
         backgroundColor: this.color,
         ease: "Power4-easeOut",
       });
-      gsap.to(".buttonBlack", {
+      gsap.to(`.${style.buttonBlack}`, {
         duration: 0.5,
         backgroundColor: this.color,
         ease: "Power4-easeOut",

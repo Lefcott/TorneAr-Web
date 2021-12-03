@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import roulettesrc from "./images/roulette.png";
 import indicatorsrc from "./images/indicator.png";
-import "./styleRoulette.scss";
+import style from "./style.module.scss";
 import animations from "./animation/index";
 import ButtonComponent from "./buttonComponent";
-
+console.log("style", style);
 function getRand(min, max) {
   const result = Math.floor(Math.random() * (max - min) + min);
   return result;
@@ -57,14 +57,14 @@ const Roulette = () => {
   }, []);
 
   return (
-    <div>
-      <div className="roulette">
-        <img className="rouletteImg" src={roulettesrc} />
-        <img className="indicator" src={indicatorsrc} />
-        <h1 className="counterStyle">{counter.toString()}</h1>
+    <>
+      <div className={style.roulette}>
+        <img className={style.rouletteImg} src={roulettesrc} />
+        <img className={style.indicator} src={indicatorsrc} />
+        <h1 className={style.counterStyle}>{counter.toString()}</h1>
       </div>
       <ButtonComponent />
-    </div>
+    </>
   );
 };
 
