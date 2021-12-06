@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import getRouletteSocket from "common/socket/roulette";
 
 import style from "./style.module.scss";
-import { useQuery } from "@apollo/client";
-import game from "queries/game";
+import useGameStatus from "hooks/useGameStatus";
 
 const getCount = (date) => {
   const difference = date - new Date();
@@ -12,37 +10,16 @@ const getCount = (date) => {
 };
 
 const Timer = () => {
-  const rouletteSocket = getRouletteSocket();
-  const [betEndDate, setBetEndDate] = useState(null);
+  const gameStatus = useGameStatus();
   const [count, setCount] = useState(0);
   const [dissapeared, setDissapeared] = useState(true);
   const isRed = count <= 9;
-  const { data } = useQuery(game, { variables: { code: "roulette" } });
-
-  // Sets the bet end date when loading the game for the first time
-  useEffect(() => {
-    if (data?.game.status === "betting") {
-      setBetEndDate(new Date(data.game.nextStatusDate));
-    }
-  }, [data]);
-
-  // Listens to betStarted event and sets betEndDate
-  useEffect(() => {
-    const handleBetStarted = (data) => {
-      setBetEndDate(new Date(data.betEndDate));
-    };
-    rouletteSocket.on("betStarted", handleBetStarted);
-
-    return () => {
-      rouletteSocket.off("betStarted", handleBetStarted);
-    };
-  }, []);
 
   // Decreases the value of counter based on the betEndDate
   useEffect(() => {
-    if (!betEndDate) return;
+    if (!gameStatus.betEndDate) return;
     const changeCount = () => {
-      const newCount = getCount(betEndDate);
+      const newCount = getCount(gameStatus.betEndDate);
       setCount(newCount);
       if (newCount > 0) {
         setTimeout(changeCount, 1000);
@@ -53,9 +30,8 @@ const Timer = () => {
       }
     };
 
-    console.log("betEndDate", betEndDate);
     changeCount();
-  }, [betEndDate]);
+  }, [gameStatus.betEndDate]);
 
   return (
     <div

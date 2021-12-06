@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Roulette from "components/Roulette";
 import getRouletteSocket from "common/socket/roulette";
 import { useQuery } from "@apollo/client";
