@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import Roulette from "components/Roulette";
-import socket from "common/socket";
+import getRouletteSocket from "common/socket/roulette";
 import { useQuery } from "@apollo/client";
 import game from "queries/game";
 
 export default function RouletteScreen() {
-  const { loading, error, data } = useQuery(game, {
+  const rouletteSocket = getRouletteSocket();
+  const { data } = useQuery(game, {
     variables: { code: "roulette" },
   });
 
@@ -20,12 +21,12 @@ export default function RouletteScreen() {
     const handleBetEnded = (params) => {
       console.log("bet has ended!", params);
     };
-    socket.on("betStarted", handleBetStarted);
-    socket.on("betEnded", handleBetEnded);
+    rouletteSocket.on("betStarted", handleBetStarted);
+    rouletteSocket.on("betEnded", handleBetEnded);
 
     return () => {
-      socket.off("betStarted", handleBetStarted);
-      socket.off("betEnded", handleBetEnded);
+      rouletteSocket.off("betStarted", handleBetStarted);
+      rouletteSocket.off("betEnded", handleBetEnded);
     };
   });
 

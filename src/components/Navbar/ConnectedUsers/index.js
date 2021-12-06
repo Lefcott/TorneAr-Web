@@ -1,20 +1,22 @@
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import getGeneralSocket from "common/socket/general";
 
 import style from "./style.module.css";
 
-const getRandomConnectedUsers = () => Math.floor(Math.random() * 10000);
-
 export default function ConnectedUsers() {
-  const [connectedUsers, setConnectedUsers] = useState(
-    getRandomConnectedUsers()
-  );
+  const generalSocket = getGeneralSocket();
+  const [connectedUsers, setConnectedUsers] = useState("...");
 
   useState(() => {
-    setInterval(() => {
-      setConnectedUsers(getRandomConnectedUsers());
-    }, 1000);
+    const handleUpdateConnectedUsers = (data) => {
+      setConnectedUsers(data.connectedUsers);
+    };
+    generalSocket.on("updateConnectedUsers", handleUpdateConnectedUsers);
+    return () => {
+      generalSocket.off("updateConnectedUsers", handleUpdateConnectedUsers);
+    };
   }, []);
 
   return (
