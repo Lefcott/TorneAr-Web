@@ -3,7 +3,7 @@ import roulettesrc from "./images/roulette.png";
 import indicatorsrc from "./images/indicator.png";
 import style from "./style.module.scss";
 import animations from "./animation";
-import ButtonComponent from "./buttonComponent";
+import ButtonComponent from "./ButtonList";
 
 function getRand(min, max) {
   const result = Math.floor(Math.random() * (max - min) + min);
