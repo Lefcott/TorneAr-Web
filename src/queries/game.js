@@ -5,6 +5,7 @@ export default gql`
     game(code: $code) {
       id
       name
+      status
       nextStatusDate
       userGames {
         user {

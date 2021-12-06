@@ -7,12 +7,6 @@ const rouletteNumbers = [
 ];
 
 class animations {
-  constructor() {
-    this.number;
-    this.color;
-    this.id;
-  }
-
   animation(number) {
     const random = (rouletteNumbers.indexOf(number) * 360) / 37;
     let tl = gsap.timeline({
@@ -42,54 +36,6 @@ class animations {
       ease: "slowly",
     });
   }
-
-  animationCounter = () => {
-    let blinkEffect = gsap.timeline({
-      repeat: 0,
-      repeatRefresh: true,
-    });
-    let bounceEffect = gsap.timeline({
-      repeat: 0,
-      repeatRefresh: true,
-    });
-    blinkEffect.to(`.${style.counterStyle}`, {
-      duration: 0.7,
-      opacity: 1,
-      ease: "Power4-easeOut",
-    });
-    blinkEffect.to(`.${style.counterStyle}`, {
-      duration: 0.3,
-      opacity: 0,
-      ease: "Power4-easeOut",
-    });
-    bounceEffect.to(`.${style.counterStyle}`, {
-      duration: 0.5,
-      fontSize: "1000%",
-    });
-    bounceEffect.to(`.${style.counterStyle}`, {
-      duration: 0.5,
-      fontSize: "500%",
-    });
-    if (this.number === "red") {
-      let red = gsap.timeline({
-        repeat: 0,
-        repeatRefresh: true,
-      });
-      red.to(`.${style.counterStyle}`, {
-        duration: 1,
-        color: "red",
-      });
-    } else {
-      let white = gsap.timeline({
-        repeat: 0,
-        repeatRefresh: true,
-      });
-      white.to(`.${style.counterStyle}`, {
-        duration: 0,
-        color: "white",
-      });
-    }
-  };
 }
 
 export default animations;

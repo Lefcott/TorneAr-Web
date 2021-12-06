@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import roulettesrc from "./images/roulette.png";
 import indicatorsrc from "./images/indicator.png";
 import style from "./style.module.scss";
 import animations from "./animation";
 import ButtonComponent from "./ButtonList";
+import Timer from "./Timer";
 
 function getRand(min, max) {
   const result = Math.floor(Math.random() * (max - min) + min);
@@ -11,9 +12,7 @@ function getRand(min, max) {
 }
 
 const Roulette = () => {
-  const [counter, setcounter] = useState(25);
   const [, setNumWin] = useState(25);
-  const counterRef = useRef(counter);
 
   useEffect(() => {
     let newNumWin = getRand(0, 37);
@@ -28,40 +27,12 @@ const Roulette = () => {
     }, 30000);
   }, []);
 
-  useEffect(() => {
-    const startCounter = () => {
-      let interval;
-      setTimeout(() => {
-        let animation = new animations();
-        animation.animationCounter();
-        interval = setInterval(() => {
-          counterRef.current = counterRef.current - 1;
-          setcounter(counterRef.current);
-          if (counterRef.current === 0) {
-            animation.number = "white";
-            clearInterval(interval);
-            setcounter(25);
-            counterRef.current = 25;
-          } else if (counterRef.current > 9) {
-            animation.animationCounter();
-          } else {
-            animation.number = "red";
-            animation.animationCounter();
-          }
-        }, 1000);
-      }, 5000);
-    };
-
-    startCounter();
-    setInterval(startCounter, 30000);
-  }, []);
-
   return (
     <>
       <div className={style.roulette}>
         <img className={style.rouletteImg} src={roulettesrc} />
         <img className={style.indicator} src={indicatorsrc} />
-        <h1 className={style.counterStyle}>{counter.toString()}</h1>
+        <Timer />
       </div>
       <ButtonComponent />
     </>
