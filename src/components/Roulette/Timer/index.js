@@ -1,37 +1,21 @@
+import useCountdown from "hooks/roulette/useCountdown";
 import { useState, useEffect } from "react";
 
 import style from "./style.module.scss";
-import useGameStatus from "hooks/useGameStatus";
-
-const getCount = (date) => {
-  const difference = date - new Date();
-  if (difference <= 0) return 0;
-  return Math.floor(difference / 1000);
-};
 
 const Timer = () => {
-  const gameStatus = useGameStatus();
-  const [count, setCount] = useState(0);
+  const countdown = useCountdown();
   const [dissapeared, setDissapeared] = useState(true);
-  const isRed = count <= 9;
+  const isRed = countdown <= 9;
 
-  // Decreases the value of counter based on the betEndDate
   useEffect(() => {
-    if (!gameStatus.betEndDate) return;
-    const changeCount = () => {
-      const newCount = getCount(gameStatus.betEndDate);
-      setCount(newCount);
-      if (newCount > 0) {
-        setTimeout(changeCount, 1000);
-        setDissapeared(false);
-        setTimeout(() => {
-          setDissapeared(true);
-        }, 700);
-      }
-    };
+    if (!countdown) return;
 
-    changeCount();
-  }, [gameStatus.betEndDate]);
+    setDissapeared(false);
+    setTimeout(() => {
+      setDissapeared(true);
+    }, 700);
+  }, [countdown]);
 
   return (
     <div
@@ -39,7 +23,7 @@ const Timer = () => {
         dissapeared ? ` ${style.timerDissapeared}` : ""
       }${isRed ? ` ${style.timerRed}` : ""}`}
     >
-      {count}
+      {countdown}
     </div>
   );
 };

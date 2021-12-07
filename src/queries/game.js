@@ -7,7 +7,7 @@ export default gql`
       name
       status
       result
-      nextStatusDate
+      nextStatusIn
       userGames {
         user {
           id

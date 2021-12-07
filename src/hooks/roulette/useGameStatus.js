@@ -12,11 +12,11 @@ const useBetEndDate = () => {
   useEffect(() => {
     if (data?.game.status === "betting") {
       setGameStatus({
-        betEndDate: new Date(data.game.nextStatusDate),
+        betEndsIn: data.game.nextStatusIn,
       });
     } else if (data?.game.status === "spinning") {
       setGameStatus({
-        betStartDate: new Date(data.game.nextStatusDate),
+        betStartsIn: data.game.nextStatusIn,
         result: data.game.result,
         users: data.game.users,
       });
@@ -27,12 +27,12 @@ const useBetEndDate = () => {
   useEffect(() => {
     const handleBetStarted = (data) => {
       setGameStatus({
-        betEndDate: new Date(data.betEndDate),
+        betEndsIn: data.nextStatusIn,
       });
     };
     const handleBetEnded = (data) => {
       setGameStatus({
-        betStartDate: new Date(data.betStartDate),
+        betStartsIn: data.nextStatusIn,
         result: data.result,
         users: data.users,
       });
