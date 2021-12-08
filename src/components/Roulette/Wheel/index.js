@@ -17,7 +17,6 @@ const Wheel = () => {
 
     gsap.to(imageRef.current, {
       duration: gameStatus.betEndsIn / 1000,
-      opacity: 0.5,
       rotation: -360 * 8,
       ease: "slowly",
     });
@@ -31,7 +30,6 @@ const Wheel = () => {
 
     gsap.to(imageRef.current, {
       duration: gameStatus.betStartsIn / 1000,
-      opacity: 0.5,
       rotation: 360 * 8 + angleToRotate,
       ease: "slowly",
     });
