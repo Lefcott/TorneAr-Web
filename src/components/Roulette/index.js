@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import ButtonList from "./ButtonList";
 import Timer from "./Timer";
 import Wheel from "./Wheel";
+import LastResults from "./LastResults";
 
 const Roulette = () => {
   return (
@@ -10,6 +11,7 @@ const Roulette = () => {
       <div className={style.roulette}>
         <Wheel />
         <img className={style.indicator} src={indicatorsrc} />
+        <LastResults />
         <Timer />
       </div>
       <ButtonList />

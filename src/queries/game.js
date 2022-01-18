@@ -8,6 +8,7 @@ export default gql`
       status
       result
       nextStatusIn
+      lastResults
       userGames {
         user {
           id
