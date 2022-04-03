@@ -15,5 +15,5 @@
   ],
   "ignoreUnimported": [],
   "ignoreUnresolved": [],
-  "ignoreUnused": ["react-scripts"]
+  "ignoreUnused": ["react-scripts", "sass"]
 }

@@ -1,5 +1,5 @@
 import style from "./style.module.scss";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import LargeButtons from "./LargeButtons";
 import MediumButtons from "./MediumButtons";
 import NumberList from "./NumberList";
