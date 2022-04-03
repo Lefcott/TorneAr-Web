@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { BLACK_NUMBERS, RED_NUMBERS, ROWS } from "../constants";
+import { getNumberColor } from "utils/getNumberColor";
+import { ROWS } from "../constants";
 
 import style from "../style.module.scss";
 
@@ -15,11 +16,7 @@ const NumberList = (props) => {
         {ROWS.map((row, i) => (
           <div key={i} className={style.buttonRow}>
             {row.map((number, ii) => {
-              const buttonClass = RED_NUMBERS.includes(number)
-                ? "button_red"
-                : BLACK_NUMBERS.includes(number)
-                ? "button_gray"
-                : "button_green";
+              const buttonClass = `button_${getNumberColor(number)}`;
               const isSelected = props.selectedNumbers.includes(number);
 
               return (

@@ -1,4 +1,5 @@
 import useGameStatus from "hooks/roulette/useGameStatus";
+import { getNumberColor } from "utils/getNumberColor";
 import style from "./style.module.scss";
 
 const LastResults = () => {
@@ -9,7 +10,10 @@ const LastResults = () => {
       Últimos resultados:
       {!gameStatus.lastResults && "..."}
       {gameStatus.lastResults?.map((result, i) => (
-        <div className={style.item} key={i}>
+        <div
+          className={`${style.item} ${style[getNumberColor(+result)]}`}
+          key={i}
+        >
           {result}
         </div>
       ))}
