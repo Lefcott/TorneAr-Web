@@ -1,5 +1,5 @@
-import Navbar from "../Navbar";
-import Sidebar from "../Sidebar";
+import Navbar from "components/Navbar";
+import Sidebar from "components/Sidebar";
 import PropTypes from "prop-types";
 
 // Yaque -- Esto lo puse aca para poder inicializar el sidebar, despues vemos de donde lo traemos.

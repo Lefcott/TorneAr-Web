@@ -1,0 +1,65 @@
+$button-margin: 3px;
+$button-size: 50px;
+
+.buttonList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .numbersContainer {
+    display: flex;
+  }
+  .rowsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .buttonRow {
+    display: flex;
+    justify-content: center;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $button-size;
+    height: $button-size;
+    border-radius: 5px;
+    margin: $button-margin;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  .button:hover {
+    transform: scale(1.1);
+    font-size: 20px;
+  }
+  .selected {
+    transform: scale(1.1);
+    font-size: 24px;
+  }
+  .button_red {
+    background-color: #ff0031;
+  }
+  .button_red:hover {
+    background-color: #e9798f;
+  }
+  .button_gray {
+    background-color: #474747;
+  }
+  .button_gray:hover {
+    background-color: #7a7a7a;
+  }
+  .button_green {
+    background-color: #1dbe45;
+  }
+  .button_green:hover {
+    background-color: #32ff65;
+  }
+  .button_4_1 {
+    width: $button-size * 4 + $button-margin * 6;
+  }
+  .button_2_1 {
+    width: $button-size * 2 + $button-margin * 2;
+  }
+  .button_1_3 {
+    height: $button-size * 3 + $button-margin * 4;
+  }
+}

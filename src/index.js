@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Router from "./router";
 import reportWebVitals from "./reportWebVitals";
+import { ApolloProvider } from "@apollo/client";
+import graphql from "common/graphql";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <ApolloProvider client={graphql}>
+      <Router />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

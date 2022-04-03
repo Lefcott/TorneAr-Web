@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "numbers";
+  src: url("./fonts/Mammoth\ Rush.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.roulette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  min-height: 300px;
+  min-width: 300px;
+  position: relative;
+}
+.indicator {
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 25%;
+  height: 25%;
+
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -62%);
+  left: 57%;
+}

@@ -9,3 +9,4 @@
 
 - **ESLint**.
 - **Prettier - Code formatter**
+- **GraphQL**
