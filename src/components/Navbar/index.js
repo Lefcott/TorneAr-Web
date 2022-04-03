@@ -1,5 +1,6 @@
 import style from "./style.module.css";
 import ConnectedUsers from "./ConnectedUsers";
+import Coins from "./Coins";
 
 export default function Navbar() {
   return (
@@ -9,6 +10,7 @@ export default function Navbar() {
         <div className={style.navbar_title}>TorneAr</div>
       </a>
       <ConnectedUsers />
+      <Coins />
     </nav>
   );
 }

@@ -1,6 +1,6 @@
 import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import getGeneralSocket from "common/socket/general";
 
 import style from "./style.module.css";
@@ -9,7 +9,7 @@ export default function ConnectedUsers() {
   const generalSocket = getGeneralSocket();
   const [connectedUsers, setConnectedUsers] = useState("...");
 
-  useState(() => {
+  useEffect(() => {
     const handleUpdateConnectedUsers = (data) => {
       setConnectedUsers(data.connectedUsers);
     };
