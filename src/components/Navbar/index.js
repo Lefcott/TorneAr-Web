@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import style from "./style.module.css";
 import ConnectedUsers from "./ConnectedUsers";
 import Coins from "./Coins";
@@ -5,10 +7,10 @@ import Coins from "./Coins";
 export default function Navbar() {
   return (
     <nav className={style.navbar}>
-      <a className={style.link} href="/">
+      <Link className={style.link} to="/">
         <img src="/images/logo.png" className={style.logo} />
         <div className={style.navbar_title}>TorneAr</div>
-      </a>
+      </Link>
       <ConnectedUsers />
       <Coins />
     </nav>

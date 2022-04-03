@@ -15,14 +15,18 @@
   min-width: 300px;
   position: relative;
 }
-.indicator {
-  margin-left: 30%;
-  margin-right: 30%;
-  width: 25%;
-  height: 25%;
 
+.wheelContainer {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.indicator {
   position: absolute;
   top: 50%;
-  transform: translate(0, -62%);
-  left: 57%;
+  left: 89%;
+  transform: translate(0, -34%);
+  width: 25%;
+  height: 25%;
 }

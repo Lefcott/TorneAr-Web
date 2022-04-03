@@ -6,13 +6,13 @@ import HomeScreen from "./screens/home";
 
 export default function Router() {
   return (
-    <Layout>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Layout>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="ruleta" element={<RouletteScreen />} />
         </Routes>
-      </BrowserRouter>
-    </Layout>
+      </Layout>
+    </BrowserRouter>
   );
 }

@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 import style from "./style.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function ListItem({ icon, text, link }) {
   return (
-    <a className={style.list_item} href={link}>
+    <Link className={style.list_item} to={link}>
       <FontAwesomeIcon icon={icon} className={style.icon} />
       <span className={style.span}>{text}</span>
-    </a>
+    </Link>
   );
 }
 
