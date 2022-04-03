@@ -7,12 +7,12 @@ import HomeScreen from "./screens/home";
 export default function Router() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomeScreen />} />
           <Route path="ruleta" element={<RouletteScreen />} />
-        </Routes>
-      </Layout>
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

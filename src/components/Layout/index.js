@@ -1,6 +1,5 @@
 import Navbar from "components/Navbar";
 import Sidebar from "components/Sidebar";
-import PropTypes from "prop-types";
 
 // Yaque -- Esto lo puse aca para poder inicializar el sidebar, despues vemos de donde lo traemos.
 import {
@@ -8,6 +7,7 @@ import {
   faCoins,
   faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
+import { Outlet } from "react-router-dom";
 
 let lists = [
   {
@@ -52,16 +52,14 @@ let lists = [
   },
 ];
 
-export default function Layout({ children }) {
+export default function Layout() {
   return (
     <div>
       <Navbar />
       <Sidebar lists={lists} />
-      <div className="container">{children}</div>
+      <div className="container">
+        <Outlet />
+      </div>
     </div>
   );
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
