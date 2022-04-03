@@ -9,8 +9,10 @@ const Roulette = () => {
   return (
     <>
       <div className={style.roulette}>
-        <Wheel />
-        <img className={style.indicator} src={indicatorsrc} />
+        <div className={style.wheelContainer}>
+          <Wheel />
+          <img className={style.indicator} src={indicatorsrc} />
+        </div>
         <LastResults />
         <Timer />
       </div>
