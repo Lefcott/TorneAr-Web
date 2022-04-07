@@ -8,11 +8,13 @@ let socket;
 const getRouletteSocket = () => {
   if (socket) return socket;
 
-  socket = io(`${process.env.REACT_APP_API_URL}/roulette`, {
+  socket = io(`${process.env.REACT_APP_API_URL}/games/roulette`, {
     reconnectionDelayMax: 10000,
     transports: ["websocket"],
     auth: {
-      // token: "123",
+      // TODO take this token from localStorage
+      accessToken:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0OTI3ODgxMn0.8EQNtx1echGYqZLcOa_iVVolvvmmdVwUg_uJ75-Qonk",
     },
   });
 

@@ -4,7 +4,7 @@ import LargeButtons from "./LargeButtons";
 import MediumButtons from "./MediumButtons";
 import NumberList from "./NumberList";
 
-const ButtonList = () => {
+const ButtonList = ({ onResultChange }) => {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
 
   const handleMouseEvent = (
@@ -34,9 +34,16 @@ const ButtonList = () => {
       <NumberList
         handleMouseEvent={handleMouseEvent}
         selectedNumbers={selectedNumbers}
+        onResultChange={onResultChange}
       />
-      <LargeButtons handleMouseEvent={handleMouseEvent} />
-      <MediumButtons handleMouseEvent={handleMouseEvent} />
+      <LargeButtons
+        handleMouseEvent={handleMouseEvent}
+        onResultChange={onResultChange}
+      />
+      <MediumButtons
+        handleMouseEvent={handleMouseEvent}
+        onResultChange={onResultChange}
+      />
     </div>
   );
 };

@@ -9,6 +9,7 @@ const LargeButtons = (props) => {
         onMouseEnter={(event) => props.handleMouseEvent(event, 1, 12)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_4_1}`}
+        onClick={() => props.onResultChange("1-12")}
       >
         1 a 12
       </div>
@@ -16,6 +17,7 @@ const LargeButtons = (props) => {
         onMouseEnter={(event) => props.handleMouseEvent(event, 13, 24)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_4_1}`}
+        onClick={() => props.onResultChange("13-24")}
       >
         13 a 24
       </div>
@@ -23,6 +25,7 @@ const LargeButtons = (props) => {
         onMouseEnter={(event) => props.handleMouseEvent(event, 25, 36)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_4_1}`}
+        onClick={() => props.onResultChange("25-36")}
       >
         25 a 36
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useQuery } from "@apollo/client";
 import getRouletteSocket from "common/socket/roulette";
-import game from "queries/game";
+import game from "queries/game/game";
 
 const useGameStatus = () => {
   const rouletteSocket = getRouletteSocket();
