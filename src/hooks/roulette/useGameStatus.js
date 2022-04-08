@@ -14,11 +14,13 @@ const useGameStatus = () => {
   useEffect(() => {
     if (data?.game.status === "betting") {
       setGameStatus({
+        status: data?.game.status,
         betEndsIn: data.game.nextStatusIn,
         lastResults: data.game.lastResults,
       });
     } else if (data?.game.status === "spinning") {
       setGameStatus({
+        status: data?.game.status,
         betStartsIn: data.game.nextStatusIn,
         result: data.game.result,
         lastResults: data.game.lastResults,
@@ -31,12 +33,14 @@ const useGameStatus = () => {
   useEffect(() => {
     const handleBetStarted = (data) => {
       setGameStatus({
+        status: "betting",
         betEndsIn: data.nextStatusIn,
         lastResults: data.lastResults || [],
       });
     };
     const handleBetEnded = (data) => {
       setGameStatus({
+        status: "spinning",
         betStartsIn: data.nextStatusIn,
         result: data.result,
         lastResults: gameStatusRef.current.lastResults || [],

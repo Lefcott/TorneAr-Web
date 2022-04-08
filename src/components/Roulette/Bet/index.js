@@ -2,15 +2,18 @@ import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import betMutation from "queries/game/bet";
 import removeBetMutation from "queries/game/removeBet";
+import useGameStatus from "hooks/roulette/useGameStatus";
 import Button from "components/Button";
 import Badge from "./Badge";
 import style from "./style.module.scss";
 import { COIN_OPTIONS } from "./constants";
 
 const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
+  const { status: gameStatus } = useGameStatus();
   const [bet] = useMutation(betMutation);
   const [removeBet] = useMutation(removeBetMutation);
   const [coins, setCoins] = useState(COIN_OPTIONS[0].value);
+  const isSpinning = gameStatus === "spinning";
 
   const handleBet = () => {
     setBetLoading(true);
@@ -49,7 +52,7 @@ const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
       {result && <Badge number={result} />}
       <select
         className={style.betSelector}
-        disabled={!result || hasBet || betLoading}
+        disabled={!result || hasBet || betLoading || isSpinning}
         value={coins}
         onChange={(e) => setCoins(e.target.value)}
       >
@@ -60,11 +63,19 @@ const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
         ))}
       </select>
       {!hasBet ? (
-        <Button green onClick={handleBet} disabled={!result || betLoading}>
+        <Button
+          green
+          onClick={handleBet}
+          disabled={!result || betLoading || isSpinning}
+        >
           Apostar
         </Button>
       ) : (
-        <Button red onClick={handleRemoveBet} disabled={!result || betLoading}>
+        <Button
+          red
+          onClick={handleRemoveBet}
+          disabled={!result || betLoading || isSpinning}
+        >
           Cancelar apuesta
         </Button>
       )}

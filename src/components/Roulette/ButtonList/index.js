@@ -1,11 +1,21 @@
-import style from "./style.module.scss";
 import { useState } from "react";
+import useGameStatus from "hooks/roulette/useGameStatus";
 import LargeButtons from "./LargeButtons";
 import MediumButtons from "./MediumButtons";
 import NumberList from "./NumberList";
+import style from "./style.module.scss";
 
-const ButtonList = ({ disabled, onResultChange }) => {
+const ButtonList = ({ onResultChange, hasBet, betLoading }) => {
+  const { status: gameStatus } = useGameStatus();
   const [selectedNumbers, setSelectedNumbers] = useState([]);
+  const isSpinning = gameStatus === "spinning";
+
+  const handleChangeResult = (newResult) => {
+    if (betLoading || hasBet || isSpinning) {
+      return;
+    }
+    onResultChange(newResult);
+  };
 
   const handleMouseEvent = (
     event,
@@ -18,7 +28,7 @@ const ButtonList = ({ disabled, onResultChange }) => {
 
     if (!isHovered) return setSelectedNumbers([]);
 
-    if (disabled) return;
+    if (hasBet || betLoading || isSpinning) return;
 
     if (numbers) {
       return setSelectedNumbers(numbers);
@@ -34,20 +44,17 @@ const ButtonList = ({ disabled, onResultChange }) => {
   return (
     <div className={style.buttonList}>
       <NumberList
-        disabled={disabled}
         handleMouseEvent={handleMouseEvent}
         selectedNumbers={selectedNumbers}
-        onResultChange={onResultChange}
+        onResultChange={handleChangeResult}
       />
       <LargeButtons
-        disabled={disabled}
         handleMouseEvent={handleMouseEvent}
-        onResultChange={onResultChange}
+        onResultChange={handleChangeResult}
       />
       <MediumButtons
-        disabled={disabled}
         handleMouseEvent={handleMouseEvent}
-        onResultChange={onResultChange}
+        onResultChange={handleChangeResult}
       />
     </div>
   );

@@ -12,13 +12,6 @@ const Roulette = () => {
   const [hasBet, setHasBet] = useState(false);
   const [betLoading, setBetLoading] = useState(false);
 
-  const handleChangeResult = (newResult) => {
-    if (betLoading || hasBet) {
-      return;
-    }
-    setResult(newResult);
-  };
-
   return (
     <>
       <div className={style.roulette}>
@@ -39,8 +32,9 @@ const Roulette = () => {
         </div>
       </div>
       <ButtonList
-        onResultChange={handleChangeResult}
-        disabled={hasBet || betLoading}
+        onResultChange={setResult}
+        betLoading={betLoading}
+        hasBet={hasBet}
       />
     </>
   );
