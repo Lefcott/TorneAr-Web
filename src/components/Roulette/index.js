@@ -9,6 +9,15 @@ import Bet from "./Bet";
 
 const Roulette = () => {
   const [result, setResult] = useState(null);
+  const [hasBet, setHasBet] = useState(false);
+  const [betLoading, setBetLoading] = useState(false);
+
+  const handleChangeResult = (newResult) => {
+    if (betLoading || hasBet) {
+      return;
+    }
+    setResult(newResult);
+  };
 
   return (
     <>
@@ -20,10 +29,16 @@ const Roulette = () => {
         <LastResults />
         <Timer />
         <div className={style.betContainer}>
-          <Bet result={result} />
+          <Bet
+            result={result}
+            hasBet={hasBet}
+            setHasBet={setHasBet}
+            betLoading={betLoading}
+            setBetLoading={setBetLoading}
+          />
         </div>
       </div>
-      <ButtonList onResultChange={setResult} />
+      <ButtonList onResultChange={handleChangeResult} />
     </>
   );
 };

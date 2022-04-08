@@ -7,33 +7,41 @@ import Badge from "./Badge";
 import style from "./style.module.scss";
 import { COIN_OPTIONS } from "./constants";
 
-const Bet = ({ result }) => {
-  const [bet, { loading: betLoading }] = useMutation(betMutation);
-  const [removeBet, { loading: removeBetLoading }] =
-    useMutation(removeBetMutation);
-  const [hasBet, setHasBet] = useState(false);
+const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
+  const [bet] = useMutation(betMutation);
+  const [removeBet] = useMutation(removeBetMutation);
   const [coins, setCoins] = useState(COIN_OPTIONS[0].value);
 
   const handleBet = () => {
+    setBetLoading(true);
     bet({
       variables: {
         gameCode: "roulette",
         result,
         coins: +coins,
       },
-    }).then(() => {
-      setHasBet(true);
-    });
+    })
+      .then(() => {
+        setHasBet(true);
+      })
+      .finally(() => {
+        setBetLoading(false);
+      });
   };
 
   const handleRemoveBet = () => {
+    setBetLoading(true);
     removeBet({
       variables: {
         gameCode: "roulette",
       },
-    }).then(() => {
-      setHasBet(false);
-    });
+    })
+      .then(() => {
+        setHasBet(false);
+      })
+      .finally(() => {
+        setBetLoading(false);
+      });
   };
 
   return (
@@ -41,7 +49,7 @@ const Bet = ({ result }) => {
       {result && <Badge number={result} />}
       <select
         className={style.betSelector}
-        disabled={!result || hasBet || betLoading || removeBetLoading}
+        disabled={!result || hasBet || betLoading}
         value={coins}
         onChange={(e) => setCoins(e.target.value)}
       >
@@ -56,11 +64,7 @@ const Bet = ({ result }) => {
           Apostar
         </Button>
       ) : (
-        <Button
-          red
-          onClick={handleRemoveBet}
-          disabled={!result || removeBetLoading}
-        >
+        <Button red onClick={handleRemoveBet} disabled={!result}>
           Cancelar apuesta
         </Button>
       )}
