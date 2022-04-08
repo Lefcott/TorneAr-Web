@@ -16,11 +16,10 @@ const Bet = ({
   hasBet,
   setHasBet,
 }) => {
-  const { status: gameStatus, betCoins, betResult } = useGameStatus();
+  const { isSpinning, betCoins, betResult } = useGameStatus();
   const [bet] = useMutation(betMutation);
   const [removeBet] = useMutation(removeBetMutation);
   const [coins, setCoins] = useState(COIN_OPTIONS[0].value);
-  const isSpinning = gameStatus === "spinning";
 
   const handleBet = () => {
     setBetLoading(true);

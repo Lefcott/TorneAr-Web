@@ -6,9 +6,8 @@ import NumberList from "./NumberList";
 import style from "./style.module.scss";
 
 const ButtonList = ({ onResultChange, hasBet, betLoading }) => {
-  const { status: gameStatus } = useGameStatus();
+  const { isSpinning } = useGameStatus();
   const [selectedNumbers, setSelectedNumbers] = useState([]);
-  const isSpinning = gameStatus === "spinning";
 
   const handleChangeResult = (newResult) => {
     if (betLoading || hasBet || isSpinning) {
