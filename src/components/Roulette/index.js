@@ -24,6 +24,7 @@ const Roulette = () => {
         <div className={style.betContainer}>
           <Bet
             result={result}
+            setResult={setResult}
             hasBet={hasBet}
             setHasBet={setHasBet}
             betLoading={betLoading}

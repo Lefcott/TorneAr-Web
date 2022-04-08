@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import betMutation from "queries/game/bet";
 import removeBetMutation from "queries/game/removeBet";
@@ -8,8 +8,15 @@ import Badge from "./Badge";
 import style from "./style.module.scss";
 import { COIN_OPTIONS } from "./constants";
 
-const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
-  const { status: gameStatus } = useGameStatus();
+const Bet = ({
+  result,
+  setResult,
+  betLoading,
+  setBetLoading,
+  hasBet,
+  setHasBet,
+}) => {
+  const { status: gameStatus, betCoins, betResult } = useGameStatus();
   const [bet] = useMutation(betMutation);
   const [removeBet] = useMutation(removeBetMutation);
   const [coins, setCoins] = useState(COIN_OPTIONS[0].value);
@@ -46,6 +53,13 @@ const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
         setBetLoading(false);
       });
   };
+
+  useEffect(() => {
+    if (!betCoins || !betResult) return;
+    setHasBet(true);
+    setCoins(betCoins);
+    setResult(betResult);
+  }, [betCoins, betResult]);
 
   return (
     <div className={style.betContainer}>

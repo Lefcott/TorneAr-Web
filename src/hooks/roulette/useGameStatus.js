@@ -7,6 +7,8 @@ const useGameStatus = () => {
   const rouletteSocket = getRouletteSocket();
   const [gameStatus, setGameStatus] = useState({});
   const { data } = useQuery(game, { variables: { code: "roulette" } });
+  const betCoins = data?.game.userGames[0].currentBetCoins;
+  const betResult = data?.game.userGames[0].currentBetResult;
   const gameStatusRef = useRef();
   gameStatusRef.current = gameStatus;
 
@@ -17,6 +19,8 @@ const useGameStatus = () => {
         status: data?.game.status,
         betEndsIn: data.game.nextStatusIn,
         lastResults: data.game.lastResults,
+        betCoins,
+        betResult,
       });
     } else if (data?.game.status === "spinning") {
       setGameStatus({
@@ -25,6 +29,8 @@ const useGameStatus = () => {
         result: data.game.result,
         lastResults: data.game.lastResults,
         users: data.game.users,
+        betCoins,
+        betResult,
       });
     }
   }, [data]);
