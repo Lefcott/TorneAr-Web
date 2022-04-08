@@ -54,6 +54,12 @@ const Bet = ({
   };
 
   useEffect(() => {
+    if (isSpinning) return;
+    setHasBet(false);
+    setResult(null);
+  }, [isSpinning]);
+
+  useEffect(() => {
     if (!betCoins || !betResult) return;
     setHasBet(true);
     setCoins(betCoins);
