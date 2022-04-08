@@ -8,6 +8,9 @@ const translations = {
   blacks: "Negras",
   "1-18": "1 a 18",
   "10-36": "19 a 36",
+  row1: "Fila 1",
+  row2: "Fila 2",
+  row3: "Fila 3",
 };
 
 export const getNumberTranslation = (number) => translations[number] || number;

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { getNumberColor } from "utils/getNumberColor";
 import { ROWS } from "common/constants";
-
+import { getNumberTranslation } from "utils/getNumberTranslation";
 import style from "../style.module.scss";
 
 const NumberList = (props) => {
@@ -38,6 +38,7 @@ const NumberList = (props) => {
                 props.handleMouseEvent(event, null, null, null, ROWS[i])
               }
               onMouseLeave={(event) => props.handleMouseEvent(event)}
+              onClick={() => props.onResultChange(`row${i + 1}`)}
             >
               2:1
             </div>
