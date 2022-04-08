@@ -38,7 +38,10 @@ const Roulette = () => {
           />
         </div>
       </div>
-      <ButtonList onResultChange={handleChangeResult} />
+      <ButtonList
+        onResultChange={handleChangeResult}
+        disabled={hasBet || betLoading}
+      />
     </>
   );
 };

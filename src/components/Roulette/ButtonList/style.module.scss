@@ -27,10 +27,6 @@ $button-size: 50px;
     cursor: pointer;
     transition: 0.4s;
   }
-  .button:hover {
-    transform: scale(1.1);
-    font-size: 20px;
-  }
   .selected {
     transform: scale(1.1);
     font-size: 24px;
@@ -38,20 +34,11 @@ $button-size: 50px;
   .button_red {
     background-color: rgb(var(--red));
   }
-  .button_red:hover {
-    background-color: rgba(var(--red), 0.5);
-  }
   .button_gray {
     background-color: rgb(var(--gray));
   }
-  .button_gray:hover {
-    background-color: rgba(var(--gray), 0.5);
-  }
   .button_green {
     background-color: rgb(var(--green));
-  }
-  .button_green:hover {
-    background-color: rgba(var(--green), 0.5);
   }
   .button_4_1 {
     width: $button-size * 4 + $button-margin * 6;

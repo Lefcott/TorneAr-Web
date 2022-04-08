@@ -4,7 +4,7 @@ import LargeButtons from "./LargeButtons";
 import MediumButtons from "./MediumButtons";
 import NumberList from "./NumberList";
 
-const ButtonList = ({ onResultChange }) => {
+const ButtonList = ({ disabled, onResultChange }) => {
   const [selectedNumbers, setSelectedNumbers] = useState([]);
 
   const handleMouseEvent = (
@@ -17,6 +17,8 @@ const ButtonList = ({ onResultChange }) => {
     const isHovered = event.type === "mouseenter";
 
     if (!isHovered) return setSelectedNumbers([]);
+
+    if (disabled) return;
 
     if (numbers) {
       return setSelectedNumbers(numbers);
@@ -32,15 +34,18 @@ const ButtonList = ({ onResultChange }) => {
   return (
     <div className={style.buttonList}>
       <NumberList
+        disabled={disabled}
         handleMouseEvent={handleMouseEvent}
         selectedNumbers={selectedNumbers}
         onResultChange={onResultChange}
       />
       <LargeButtons
+        disabled={disabled}
         handleMouseEvent={handleMouseEvent}
         onResultChange={onResultChange}
       />
       <MediumButtons
+        disabled={disabled}
         handleMouseEvent={handleMouseEvent}
         onResultChange={onResultChange}
       />
