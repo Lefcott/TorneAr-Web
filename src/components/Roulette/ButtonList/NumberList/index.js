@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { getNumberColor } from "utils/getNumberColor";
-import { ROWS } from "../constants";
+import { ROWS } from "common/constants";
 
 import style from "../style.module.scss";
 

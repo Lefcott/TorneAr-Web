@@ -10,10 +10,7 @@ const LastResults = () => {
       Últimos resultados:
       {!gameStatus.lastResults && "..."}
       {gameStatus.lastResults?.map((result, i) => (
-        <div
-          className={`${style.item} ${style[getNumberColor(+result)]}`}
-          key={i}
-        >
+        <div className={`${style.item} ${getNumberColor(+result)}`} key={i}>
           {result}
         </div>
       ))}

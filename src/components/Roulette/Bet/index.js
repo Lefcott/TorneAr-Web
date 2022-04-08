@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 import betMutation from "queries/game/bet";
 import removeBetMutation from "queries/game/removeBet";
 import Button from "components/Button";
+import Badge from "./Badge";
 import style from "./style.module.scss";
 import { COIN_OPTIONS } from "./constants";
 
@@ -37,6 +38,7 @@ const Bet = ({ result }) => {
 
   return (
     <div className={style.betContainer}>
+      {result && <Badge number={result} />}
       <select
         className={style.betSelector}
         disabled={!result || hasBet || betLoading || removeBetLoading}

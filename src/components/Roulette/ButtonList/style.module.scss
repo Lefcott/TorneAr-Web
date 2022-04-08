@@ -36,22 +36,22 @@ $button-size: 50px;
     font-size: 24px;
   }
   .button_red {
-    background-color: #ff0031;
+    background-color: rgb(var(--red));
   }
   .button_red:hover {
-    background-color: #e9798f;
+    background-color: rgba(var(--red), 0.5);
   }
   .button_gray {
-    background-color: #474747;
+    background-color: rgb(var(--gray));
   }
   .button_gray:hover {
-    background-color: #7a7a7a;
+    background-color: rgba(var(--gray), 0.5);
   }
   .button_green {
-    background-color: #1dbe45;
+    background-color: rgb(var(--green));
   }
   .button_green:hover {
-    background-color: #32ff65;
+    background-color: rgba(var(--green), 0.5);
   }
   .button_4_1 {
     width: $button-size * 4 + $button-margin * 6;

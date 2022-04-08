@@ -1,11 +1,4 @@
-import {
-  BLACK_NUMBERS,
-  RED_NUMBERS,
-} from "components/Roulette/ButtonList/constants";
+import { RED_NUMBERS } from "common/constants";
 
 export const getNumberColor = (number) =>
-  RED_NUMBERS.includes(number)
-    ? "red"
-    : BLACK_NUMBERS.includes(number)
-    ? "gray"
-    : "green";
+  RED_NUMBERS.includes(number) ? "red" : number === 0 ? "green" : "gray";

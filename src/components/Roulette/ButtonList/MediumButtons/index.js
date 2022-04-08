@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { BLACK_NUMBERS, RED_NUMBERS } from "../constants";
+import { BLACK_NUMBERS, RED_NUMBERS } from "common/constants";
 
 import style from "../style.module.scss";
 

@@ -1,3 +1,9 @@
+:root {
+  --red: 255, 0, 49;
+  --green: 29, 190, 69;
+  --gray: 71, 71, 71;
+}
+
 @font-face {
   font-family: "RapierZero";
   src: url("assets/fonts/RapierZero.otf");
@@ -32,10 +38,20 @@
 }
 
 body {
-  background-color: #16212B;
+  background-color: #16212b;
   color: whitesmoke;
   font-family: NotoSans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
+}
+
+.red {
+  background-color: rgb(var(--red));
+}
+.gray {
+  background-color: rgb(var(--gray));
+}
+.green {
+  background-color: rgb(var(--green));
 }
