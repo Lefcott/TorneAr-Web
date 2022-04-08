@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import { getNumberTranslation } from "utils/getNumberTranslation";
 import style from "../style.module.scss";
 
 const LargeButtons = (props) => {
@@ -11,7 +11,7 @@ const LargeButtons = (props) => {
         className={`${style.button} ${style.button_gray} ${style.button_4_1}`}
         onClick={() => props.onResultChange("1-12")}
       >
-        1 a 12
+        {getNumberTranslation("1-12")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 13, 24)}
@@ -19,7 +19,7 @@ const LargeButtons = (props) => {
         className={`${style.button} ${style.button_gray} ${style.button_4_1}`}
         onClick={() => props.onResultChange("13-24")}
       >
-        13 a 24
+        {getNumberTranslation("13-24")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 25, 36)}
@@ -27,7 +27,7 @@ const LargeButtons = (props) => {
         className={`${style.button} ${style.button_gray} ${style.button_4_1}`}
         onClick={() => props.onResultChange("25-36")}
       >
-        25 a 36
+        {getNumberTranslation("25-36")}
       </div>
     </div>
   );
