@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { getNumberColor } from "utils/getNumberColor";
 import { ROWS } from "common/constants";
-import { getNumberTranslation } from "utils/getNumberTranslation";
 import style from "../style.module.scss";
 
 const NumberList = (props) => {

@@ -64,7 +64,7 @@ const Bet = ({ result, betLoading, setBetLoading, hasBet, setHasBet }) => {
           Apostar
         </Button>
       ) : (
-        <Button red onClick={handleRemoveBet} disabled={!result}>
+        <Button red onClick={handleRemoveBet} disabled={!result || betLoading}>
           Cancelar apuesta
         </Button>
       )}
