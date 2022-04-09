@@ -18,9 +18,9 @@ const MediumButtons = (props) => {
         onMouseEnter={(event) => props.handleMouseEvent(event, 2, 36, 2)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
-        onClick={() => props.onResultChange("evens")}
+        onClick={() => props.onResultChange("even")}
       >
-        {getNumberTranslation("evens")}
+        {getNumberTranslation("even")}
       </div>
       <div
         onMouseEnter={(event) =>
@@ -28,9 +28,9 @@ const MediumButtons = (props) => {
         }
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_red} ${style.button_2_1}`}
-        onClick={() => props.onResultChange("reds")}
+        onClick={() => props.onResultChange("red")}
       >
-        {getNumberTranslation("reds")}
+        {getNumberTranslation("red")}
       </div>
       <div
         onMouseEnter={(event) =>
@@ -38,17 +38,17 @@ const MediumButtons = (props) => {
         }
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
-        onClick={() => props.onResultChange("blacks")}
+        onClick={() => props.onResultChange("black")}
       >
-        {getNumberTranslation("blacks")}
+        {getNumberTranslation("black")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 1, 35, 2)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
-        onClick={() => props.onResultChange("odds")}
+        onClick={() => props.onResultChange("odd")}
       >
-        {getNumberTranslation("odds")}
+        {getNumberTranslation("odd")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 19, 36)}

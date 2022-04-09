@@ -71,7 +71,7 @@ const Bet = ({
       {result && <Badge number={result} />}
       <select
         className={style.betSelector}
-        disabled={!result || hasBet || betLoading || isSpinning}
+        disabled={hasBet || betLoading || isSpinning}
         value={coins}
         onChange={(e) => setCoins(e.target.value)}
       >
