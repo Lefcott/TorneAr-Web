@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import { getNumberColor } from "utils/getNumberColor";
-import { ROWS } from "../constants";
-
+import { ROWS } from "common/constants";
 import style from "../style.module.scss";
 
 const NumberList = (props) => {
@@ -9,6 +8,7 @@ const NumberList = (props) => {
     <div className={style.numbersContainer}>
       <div
         className={`${style.button} ${style.button_green} ${style.button_1_3}`}
+        onClick={() => props.onResultChange("0")}
       >
         0
       </div>
@@ -25,6 +25,7 @@ const NumberList = (props) => {
                   className={`${style.button} ${style[buttonClass]}${
                     isSelected ? ` ${style.selected}` : ""
                   }`}
+                  onClick={() => props.onResultChange(`${number}`)}
                 >
                   {number}
                 </div>
@@ -36,6 +37,7 @@ const NumberList = (props) => {
                 props.handleMouseEvent(event, null, null, null, ROWS[i])
               }
               onMouseLeave={(event) => props.handleMouseEvent(event)}
+              onClick={() => props.onResultChange(`row${i + 1}`)}
             >
               2:1
             </div>
@@ -49,6 +51,7 @@ const NumberList = (props) => {
 NumberList.propTypes = {
   handleMouseEvent: PropTypes.func.isRequired,
   selectedNumbers: PropTypes.arrayOf(PropTypes.number).isRequired,
+  onResultChange: PropTypes.func.isRequired,
 };
 
 export default NumberList;

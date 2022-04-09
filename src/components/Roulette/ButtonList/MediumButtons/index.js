@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { BLACK_NUMBERS, RED_NUMBERS } from "../constants";
-
+import { BLACK_NUMBERS, RED_NUMBERS } from "common/constants";
+import { getNumberTranslation } from "utils/getNumberTranslation";
 import style from "../style.module.scss";
 
 const MediumButtons = (props) => {
@@ -10,15 +10,17 @@ const MediumButtons = (props) => {
         onMouseEnter={(event) => props.handleMouseEvent(event, 1, 18)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
+        onClick={() => props.onResultChange("1-18")}
       >
-        1 a 18
+        {getNumberTranslation("1-18")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 2, 36, 2)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
+        onClick={() => props.onResultChange("even")}
       >
-        Pares
+        {getNumberTranslation("even")}
       </div>
       <div
         onMouseEnter={(event) =>
@@ -26,8 +28,9 @@ const MediumButtons = (props) => {
         }
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_red} ${style.button_2_1}`}
+        onClick={() => props.onResultChange("red")}
       >
-        Rojas
+        {getNumberTranslation("red")}
       </div>
       <div
         onMouseEnter={(event) =>
@@ -35,22 +38,25 @@ const MediumButtons = (props) => {
         }
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
+        onClick={() => props.onResultChange("black")}
       >
-        Negras
+        {getNumberTranslation("black")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 1, 35, 2)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
+        onClick={() => props.onResultChange("odd")}
       >
-        Impares
+        {getNumberTranslation("odd")}
       </div>
       <div
         onMouseEnter={(event) => props.handleMouseEvent(event, 19, 36)}
         onMouseLeave={(event) => props.handleMouseEvent(event)}
         className={`${style.button} ${style.button_gray} ${style.button_2_1}`}
+        onClick={() => props.onResultChange("19-36")}
       >
-        19 a 36
+        {getNumberTranslation("19-36")}
       </div>
     </div>
   );

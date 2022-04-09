@@ -5,10 +5,10 @@ let socket;
 /**
  * @returns {import("socket.io-client").Socket}
  */
-const getRouletteSocket = () => {
+const getUserSocket = () => {
   if (socket) return socket;
 
-  socket = io(`${process.env.REACT_APP_API_URL}/games/roulette`, {
+  socket = io(`${process.env.REACT_APP_API_URL}/user`, {
     reconnectionDelayMax: 10000,
     transports: ["websocket"],
     auth: {
@@ -21,4 +21,4 @@ const getRouletteSocket = () => {
   return socket;
 };
 
-export default getRouletteSocket;
+export default getUserSocket;

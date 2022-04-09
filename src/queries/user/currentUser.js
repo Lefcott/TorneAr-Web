@@ -1,8 +1,8 @@
 import gql from "graphql-tag";
 
 export default gql`
-  query User($userId: Int!) {
-    user(id: $userId) {
+  query currentUser {
+    currentUser {
       id
       name
       surname
